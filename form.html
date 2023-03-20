@@ -4,65 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="form.css">
     <title>Cadastro</title>
 </head>
 <body>
-
     <div>
-        <h1 id="titulo">Informações para Cadastro</h1>
+        <h1 id="titulo">Cadastre-se</h1>
         <p id="subtitulo">Informe seus dados:</p>
-        <br>
-    </div>
+    </div><br>
 
-    <form>
-        <fieldset class="grupo">
-            <div>
-                <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required>
-            </div>
-
-            <div class="campo">
-                <label for="sobrenome"><strong>Sobrenome</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
-            </div>
-        </fieldset>
-            
-        <div class="campo">
+    <div id="form">
+        <form action="">
+            <label for="nome"><strong>Nome</strong></label>
+            <div class="input">
+                <input type="text" name="nome" placeholder="nome completo" id="name" required>
+            </div><br>
             <label for="email"><strong>Email</strong></label>
-            <input type="email" name="email" id="email" required>
-        </div>
+                <div class="input">
+                    <input name="email" placeholder="exemplo@gmail.com" id="email" required>
+                </div><br>
 
-        <div class="campo">
-            <label><strong>Qual seu gênero?</strong></label>
-            <label>
-                <input type="radio" name="genero" value="masculino">Masculino
-            </label>
-            <label>
-                <input type="radio" name="genero" value="feminino">Feminino
-            </label>
-            <label>
-                <input type="radio" name="genero" value="outro">Outro
-            </label>
-        </div>
+                 <div id="checkbox">
+                    <label><strong>Qual seu gênero?</strong></label>
+                    <label>
+                        <input type="radio" name="genero" value="masculino">Masculino
+                    </label>
+                    <label>
+                        <input type="radio" name="genero" value="feminino">Feminino
+                    </label>
+                    <label>
+                        <input type="radio" name="genero" value="naobinarie">Não Binárie
+                    </label>
+                    <label>
+                        <input type="radio" name="genero" value="outro">Outro
+                    </label>
+                </div><br>
 
-        <div><strong>Etnia</strong></div>
-        <select id="Etnia" required>
-            <option selected disabled value="">Selecione</option>
-            <option>Branco</option>
-            <option>Pardo</option>
-            <option>Preto</option>
-            <option>Amarelo</option>
-            <option>Indígena</option>
-        </select>
+                <div><strong>Etnia</strong></div>
+                    <select id="Etnia" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option>Branco</option>
+                        <option>Pardo</option>
+                        <option>Preto</option>
+                        <option>Amarelo</option>
+                        <option>Indígena</option>
+                    </select><br><br>
 
-        <h4><br>
-            <label><strong>Notas, sugestões ou perguntas</strong></label>
-        </h4>
+                    <div id="checkbox">
+                        <label><strong>Estado Civil:</strong></label>
+                        <label>
+                            <input type="radio" name="estadocivil" value="solteiro">Solteiro
+                        </label>
+                        <label>
+                            <input type="radio" name="estadocivil" value="casado">Casado
+                        </label>
+                        <label>
+                            <input type="radio" name="estadocivil" value="separado">Separado
+                        </label>
+                        <label>
+                            <input type="radio" name="estadocivil" value="divorciado">Divorciado
+                        </label>
+                        <label>
+                            <input type="radio" name="estadocivil" value="viuvo">Viúvo
+                        </label>
+                        <label>
+                            <input type="radio" name="estadocivil" value="encalhado">Encalhado
+                        </label>
+                    </div><br>
 
-        <div><textarea row="6" style="width:26em" id="comentario" name="comentario"></textarea></div>
-        <button class="botao" type="submit">Concluído</button>
-    </form>
-    
+                <div id="data">
+                    <label><strong>Insira a data:<strong></label>
+                    <div class="data">
+                        <input type="date" required> 
+                    </div>
+                </div><br>
+
+                <div>
+                    <label><strong>Notas, sugestões ou perguntas</strong></label>
+                    <div class="comentario">
+                        <textarea row="6" style="width:26em" name="comentario"></textarea>
+                    </div>
+                </div><br>
+
+                <div id="botao">
+                    <button type="submit">Concluído</button>
+                </div>
+
+        </form>
+    </div>
 </body>
 </html>
